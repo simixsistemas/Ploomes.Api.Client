@@ -4,10 +4,13 @@ using Ploomes.Api.Client.Resources;
 using System;
 
 namespace Ploomes.Api.Client {
+    /// <summary>
+    /// Ploomes client
+    /// </summary>
     public sealed class PloomesClient {
         #region Fields
 
-        private static PloomersApiClientOptions _clientOptions;
+        private static PloomesApiClientOptions _clientOptions;
 
         private readonly Lazy<IDealResource> _dealResouce =
             new Lazy<IDealResource>(() => new DealResource(_clientOptions.Token));
@@ -19,15 +22,25 @@ namespace Ploomes.Api.Client {
 
         #region Properties
 
+        /// <summary>
+        /// Deals Resources
+        /// </summary>
         public IDealResource Deals => _dealResouce.Value;
 
+        /// <summary>
+        /// Contacts resources
+        /// </summary>
         public IContactResource Contacts => _contactResouce.Value;
 
         #endregion
 
         #region Constructors
 
-        public PloomesClient(PloomersApiClientOptions clientOptions) {
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        /// <param name="clientOptions">Api client options</param>
+        public PloomesClient(PloomesApiClientOptions clientOptions) {
             if (string.IsNullOrWhiteSpace(clientOptions.Token))
                 throw new ArgumentNullException(nameof(clientOptions.Token), "Token can't be null");
 

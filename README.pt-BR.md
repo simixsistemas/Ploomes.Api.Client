@@ -1,33 +1,33 @@
 
 ![Nuget](https://img.shields.io/nuget/v/Ploomes.Api.Client.svg)
 
-> Veja essa documentação em: [Português](README.pt-BR.md)
+> Read this in other languages: [English](README.md)
 
 # Ploomes.Api.Client
- Ploomes api .net client library
+ Biblioteca .net para consumo da api Ploomes
 
 
-# Getting started
+# Iniciando com o pacote
 
 ```
 PM> Install-Package Ploomes.Api.Client
 ```
 
-## Building api client
+## Criando o cliente
 
 ```c#
-var options = new PloomesApiClientOptions { Token = "your-ploomes-token" };
+var options = new PloomesApiClientOptions { Token = "seu-token-ploomes" };
 var client = new MovideskClient(options);
 ```
 
-### Getting Deals
+### Buscando negócios
 
 ```c#
 ...
 var deals = await client.Deals.GetAsync(new OData { Top = 50 });
 ```
 
-### Getting Contacts
+### Buscando Clientes
 
 ```c#
 ...
@@ -35,7 +35,7 @@ var contacts = await client.Contacts.GetAsync(new OData { Top = 50 });
 ```
 
 
-## Filtering
+## Usando filtros
 
 ```c#
 ...
