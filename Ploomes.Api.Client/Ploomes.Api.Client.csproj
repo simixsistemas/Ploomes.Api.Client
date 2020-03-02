@@ -1,12 +1,42 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <AssemblyName>Ploomes.Api.Client</AssemblyName>
+    <RootNamespace>Ploomes.Api.Client</RootNamespace>
+    <PackageId>Ploomes.Api.Client</PackageId>
+
+    <Description>A .netstandard library to work with Ploomes APIs.</Description>
+    
+    <PackageProjectUrl>https://github.com/simixsistemas/Ploomes.Api.Client</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/simixsistemas/Ploomes.Api.Client</RepositoryUrl>
+    <PackageTags>ploomers,api</PackageTags>
+    
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0</FileVersion>
+    
+    <Authors>Felipe Baltazar</Authors>
+    <Company>Simix Sistemas</Company>
+    <Owners>Simix Sistemas</Owners>
+    <Copyright>Copyright 2020</Copyright>
+    
+    <DocumentationFile>.\Ploomes.Api.Client\Ploomes.Api.Client.xml</DocumentationFile>
+    
+    <PackageLicenseFile>README.md</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Polly" Version="7.2.0" />
     <PackageReference Include="Refit" Version="5.0.23" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
