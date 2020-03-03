@@ -1,13 +1,14 @@
-﻿---
+---
 name: Bug report
 about: Create a report to help us improve
-title: "[Bug 🐛] "
-labels: 'bug 🐛'
-assignees: '@simix-markus'
+title: "[Bug \U0001F41B]"
+labels: "bug \U0001F41B"
+assignees: simix-markus
 
 ---
 
 ### Description
+<!--A clear and concise description of what the bug is.-->
 
 ### Steps to Reproduce
 
