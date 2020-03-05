@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Ploomes.Api.Client.Models {
     /// <remarks/>
@@ -117,5 +118,9 @@ namespace Ploomes.Api.Client.Models {
         public object Key { get; set; }
         /// <remarks/>
         public object LastDocumentId { get; set; }
+        /// <summary>
+        /// Tags property needs to use $expand to be inflated <see href="https://serverurl/Contacts?$expand=Tags($select=Tag;$expand=Tag)"/>
+        /// </summary>
+        public IEnumerable<Tag> Tags { get; set; }
     }
 }

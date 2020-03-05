@@ -315,6 +315,11 @@
         <member name="P:Ploomes.Api.Client.Models.Contact.LastDocumentId">
             <remarks/>
         </member>
+        <member name="P:Ploomes.Api.Client.Models.Contact.Tags">
+            <summary>
+            Tags property needs to use $expand to be inflated <see href="https://serverurl/Contacts?$expand=Tags($select=Tag;$expand=Tag)"/>
+            </summary>
+        </member>
         <member name="T:Ploomes.Api.Client.Models.Deal">
             <remarks/>
         </member>
@@ -445,6 +450,26 @@
             <remarks/>
         </member>
         <member name="P:Ploomes.Api.Client.Models.Deal.DealNumber">
+            <remarks/>
+        </member>
+        <member name="P:Ploomes.Api.Client.Models.Deal.Tags">
+            <summary>
+            Tags property needs to use $expand to be inflated <see href="https://serverurl/Deals?$expand=Tags($select=Tag;$expand=Tag)"/>
+            </summary>
+        </member>
+        <member name="T:Ploomes.Api.Client.Models.Tag">
+            <remarks/>
+        </member>
+        <member name="P:Ploomes.Api.Client.Models.Tag.Id">
+            <remarks/>
+        </member>
+        <member name="P:Ploomes.Api.Client.Models.Tag.Name">
+            <remarks/>
+        </member>
+        <member name="P:Ploomes.Api.Client.Models.Tag.Color">
+            <remarks/>
+        </member>
+        <member name="P:Ploomes.Api.Client.Models.Tag.EntityId">
             <remarks/>
         </member>
         <member name="T:Ploomes.Api.Client.PloomesClient">
