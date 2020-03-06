@@ -1,6 +1,15 @@
-﻿namespace Ploomes.Api.Client.Models {
+﻿using Newtonsoft.Json;
+
+namespace Ploomes.Api.Client.Models {
     /// <remarks/>
     public sealed class Tag {
+        /// <remarks/>
+        [JsonProperty("Tag")]
+        public TagContent Content { get; set; }
+    }
+
+    /// <remarks/>
+    public class TagContent {
         /// <remarks/>
         public int Id { get; set; }
         /// <remarks/>

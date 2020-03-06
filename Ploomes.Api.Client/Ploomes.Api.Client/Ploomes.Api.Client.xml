@@ -460,16 +460,22 @@
         <member name="T:Ploomes.Api.Client.Models.Tag">
             <remarks/>
         </member>
-        <member name="P:Ploomes.Api.Client.Models.Tag.Id">
+        <member name="P:Ploomes.Api.Client.Models.Tag.Content">
             <remarks/>
         </member>
-        <member name="P:Ploomes.Api.Client.Models.Tag.Name">
+        <member name="T:Ploomes.Api.Client.Models.TagContent">
             <remarks/>
         </member>
-        <member name="P:Ploomes.Api.Client.Models.Tag.Color">
+        <member name="P:Ploomes.Api.Client.Models.TagContent.Id">
             <remarks/>
         </member>
-        <member name="P:Ploomes.Api.Client.Models.Tag.EntityId">
+        <member name="P:Ploomes.Api.Client.Models.TagContent.Name">
+            <remarks/>
+        </member>
+        <member name="P:Ploomes.Api.Client.Models.TagContent.Color">
+            <remarks/>
+        </member>
+        <member name="P:Ploomes.Api.Client.Models.TagContent.EntityId">
             <remarks/>
         </member>
         <member name="T:Ploomes.Api.Client.PloomesClient">

@@ -57,7 +57,7 @@ namespace Ploomes.Api.Client.Helpers {
 
             AppendProperty(ref stringBuilder, "filter", Filter);
             AppendProperty(ref stringBuilder, "orderby", OrderBy);
-            AppendProperty(ref stringBuilder, "limit", Top?.ToString());
+            AppendProperty(ref stringBuilder, "top", Top?.ToString());
             AppendProperty(ref stringBuilder, "skip", Skip?.ToString());
             AppendProperty(ref stringBuilder, "select", Select);
             AppendProperty(ref stringBuilder, "expand", Expand);
