@@ -5,6 +5,7 @@ using Polly;
 using Refit;
 using System;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Ploomes.Api.Client.Resources {
@@ -52,7 +53,7 @@ namespace Ploomes.Api.Client.Resources {
                 throw new ArgumentNullException(nameof(accessToken), "Token can't be null");
 
             _token = accessToken;
-            _ploomesApiClient = Refit.RestService.For<IPloomesApiClient>(baseUrl);
+            _ploomesApiClient = RestService.For<IPloomesApiClient>(baseUrl, new RefitSettings { HttpMessageHandlerFactory = () => new UriQueryUnescapingHandler() });
 
             _asyncPolicy = Policy
                 .Handle<ApiException>(ex => ex.StatusCode != HttpStatusCode.NotFound && ex.StatusCode != HttpStatusCode.Forbidden)
