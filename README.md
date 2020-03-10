@@ -17,7 +17,7 @@ PM> Install-Package Ploomes.Api.Client
 
 ```c#
 var options = new PloomesApiClientOptions { Token = "your-ploomes-token" };
-var client = new MovideskClient(options);
+var client = new PloomesClient(options);
 ```
 
 ### Getting Deals
